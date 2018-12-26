@@ -1,0 +1,221 @@
+.movie_about {
+    margin-top: 80px;
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    letter-spacing: 1px;
+    /*grid-template-rows: 600px 150px;*/
+    /*height: 650px;*/
+}
+
+.movie_poster_desc {
+    display: grid;
+    grid-template-columns: 480px auto;
+    margin-top: 70px;
+}
+
+.movie_moreInfo {
+    margin-left: 100px;
+}
+
+.movie_info_elem {
+    width: 150px;
+}
+
+.movie_moreInfo ul {
+    margin-top: 30px;
+}
+
+.movie_moreInfo ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+}
+
+.movie_moreInfo ul li a {
+    color: white;
+}
+
+.movie_scenes {
+    position: relative;
+    margin-top: 80px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.sceneItem {
+    height: 200px;
+    width: 200px;
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.biggerImg {
+    position: absolute;
+    padding: 10px; /* Arrow size */
+    box-shadow: 1px -1px 0 1px rgba(255,255,255, 0.1) inset;
+    -webkit-box-shadow: 2px -2px rgba(255,255,255, 0.1) inset;
+    border: solid transparent;
+    border-width: 0 0 1rem 1rem;
+    transition: 0.8s;
+    z-index: 1;
+}
+
+.sceneItem:hover .biggerImg {
+    box-shadow: 2px -2px 0 2px white inset;
+    -webkit-box-shadow: 4px -4px white inset;
+}
+
+.biggerImg_right {
+    transform:rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.biggerImg_left {
+    /*transform:rotate(0deg);*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.gallery {
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    color: white;
+    font-size: 30px;
+}
+
+.shadow {
+    /*position:fixed;*/
+    background: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.gallery_close {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.gallery i {
+    /*z-index: 2;*/
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: rgba(255,255,255, 0.1);
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.gallery i:hover {
+    color: white;
+}
+
+.gallery_image {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top:70px;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+}
+
+.gallery_image img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.arrow_holder {
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.arrow_holder:hover > .arrow{
+    box-shadow: 2px -2px 0 2px white inset;
+    -webkit-box-shadow: 4px -4px white inset;
+}
+
+.arrow_holder:hover{
+    background-color: rgba(255,255,255, 0.1);
+}
+
+.allScenery {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    /*align-items: center;*/
+    overflow-x: scroll;
+}
+
+.galleryItem {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.galleryItem:hover {
+    height: 120px;
+    width: 120px;
+}
+
+.activeImg {
+    border: 2px solid red;
+}
+
+.movie_film {
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.movie_film iframe {
+    width: 90%;
+    height: auto;
+    border: none;
+}
