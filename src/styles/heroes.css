@@ -1,0 +1,45 @@
+.heroes_persons {
+    margin-top: 80px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 100px;
+    color: white;
+    letter-spacing: 1px;
+    transition-delay: 3s;
+}
+
+.heroes_persons:hover {
+    color: white;
+}
+
+.personImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.personImage img {
+    /*height: 100%;*/
+    /*width: auto;*/
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 10px black;
+}
+
+.personInfo {
+    padding-left: 30px;
+    text-align: justify;
+}
+
+.person_nonActive {
+    z-index: 1;
+    margin-bottom:  10px;
+    transform: scale(1);
+}
+
+.person_active {
+    z-index: 10;
+    transform: scale(2);
+}

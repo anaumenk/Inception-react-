@@ -11,6 +11,7 @@ class Home extends Component {
             InfoArray: [],
 
             castIid1: 0,
+            castName1: '',
             castSrc1: '',
 
             castIid2: 1,
@@ -52,6 +53,7 @@ class Home extends Component {
 
         this.setState({
             castId1: 0,
+            castName1: this.state.HeroesArray[0].name,
             castSrc1: require(`../images/heroes/${this.state.HeroesArray[0].src}`),
 
             castId2: 1,
@@ -91,6 +93,7 @@ class Home extends Component {
     changeCast(id1, id2, id3) {
         this.setState({
             castId1: id1,
+            castName1: this.state.HeroesArray[id1].name,
             castSrc1: require(`../images/heroes/${this.state.HeroesArray[id1].src}`),
 
             castId2: id2,
@@ -155,21 +158,24 @@ class Home extends Component {
                     <div className="label">Cast</div>
                     <div className="arrow arrow-left" onClick={() => this.CastSlideLeft()}></div>
                     <div className="heroesList">
-                        <div
+                        <a
+                            href={`heroes#${this.state.castId1}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc1})`}}
                         >
-                        </div>
-                        <div
+                        </a>
+                        <a
+                            href={`heroes#${this.state.castId2}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc2})`}}
                         >
-                        </div>
-                        <div
+                        </a>
+                        <a
+                            href={`heroes#${this.state.castId3}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc3})`}}
                         >
-                        </div>
+                        </a>
 
                     </div>
                     <div className="arrow arrow-right" onClick={() => this.CastSlideRight()}></div>

@@ -257,33 +257,33 @@ export class Movie extends Component {
                             <li>
                                 <div className="movie_info_elem">Cast:</div>
                                 <div>
-                                    <Link to="/movie">Leonardo DiCaprio</Link>
+                                    <Link to="/heroes#0">Leonardo DiCaprio</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Joseph Gordon</Link>
+                                    <Link to="/heroes#1">Joseph Gordon</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Ellen Page</Link>
+                                    <Link to="/heroes#2">Ellen Page</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Tom Hardy</Link>
+                                    <Link to="/heroes#3">Tom Hardy</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Ken Watanabe</Link>
+                                    <Link to="/heroes#4">Ken Watanabe</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Dileep Rao</Link>
+                                    <Link to="/heroes#5">Dileep Rao</Link>
                                     {this.state.a}
 
-                                    <Link to="/movie">Cillian Murphy</Link>
+                                    <Link to="/heroes#6">Cillian Murphy</Link>
                                     {this.state.a}
                                     <br />
-                                    <Link to="/movie">Tom Berenger</Link>
+                                    <Link to="/heroes7#">Tom Berenger</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Marion Cotillard</Link>
+                                    <Link to="/heroes#8">Marion Cotillard</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Pete Postlethwaite</Link>
+                                    <Link to="/heroes#9">Pete Postlethwaite</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Michael Caine</Link>
+                                    <Link to="/heroes#10">Michael Caine</Link>
                                     {this.state.a}
-                                    <Link to="/movie">Lukas Haas</Link>
+                                    <Link to="/heroes#11">Lukas Haas</Link>
                                     {this.state.a}
-                                    <Link to="/new">Talulah Riley</Link>
+                                    <Link to="/heroes#12">Talulah Riley</Link>
                                 </div>
                             </li>
 

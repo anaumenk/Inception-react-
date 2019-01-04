@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './styles/index.css';
 import './styles/home.css';
 import './styles/movie.css'
+import './styles/heroes.css'
+import './styles/info.css'
 
 import Home from './components/Home';
 import Info from './components/Info';
