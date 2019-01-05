@@ -34,12 +34,10 @@
 }
 
 .person_nonActive {
-    z-index: 1;
     margin-bottom:  10px;
     transform: scale(1);
 }
 
 .person_active {
-    z-index: 10;
     transform: scale(2);
 }

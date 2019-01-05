@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Info from './components/Info';
 import Heroes from './components/Heroes';
 import {Movie} from './components/Movie';
+import {InfoItem} from "./components/Info";
 
 
 class App extends Component {
@@ -21,8 +22,9 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route path="/heroes" component={Heroes} />
-                    <Route path="/info" component={Info} />
-                    <Route path="/movie" component={Movie} />
+                    <Route exact path="/info" component={Info} />
+                    <Route path="/info/:id" component={InfoItem} />
+                    <Route exact path="/movie" component={Movie} />
                     <Route path="*" component={NotFound}/>
                 </Switch>
                 <Footer />

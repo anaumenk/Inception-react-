@@ -155,7 +155,7 @@ class Home extends Component {
                     </Link>
                 </div>
                 <div className="home_slider">
-                    <div className="label">Cast</div>
+                    <Link to="/heroes"><div className="label">Cast</div></Link>
                     <div className="arrow arrow-left" onClick={() => this.CastSlideLeft()}></div>
                     <div className="heroesList">
                         <a
@@ -181,25 +181,25 @@ class Home extends Component {
                     <div className="arrow arrow-right" onClick={() => this.CastSlideRight()}></div>
                 </div>
                 <div className="home_slider">
-                    <div className="label">Info</div>
+                    <Link to="/info"><div className="label">Info</div></Link>
                     <div className="arrow arrow-left" onClick={() => this.InfoSlideLeft()}></div>
 
                     <div className="info_list">
-                        <div className="infoItem">
+                        <Link to={`info/${this.state.infoId1}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc1})`}}></div>
                             <p>{this.state.infoName1}</p>
-                        </div>
-                        <div className="infoItem">
+                        </Link>
+                        <Link to={`info/${this.state.infoId2}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc2})`}}></div>
                             <p>{this.state.infoName2}</p>
-                        </div>
-                        <div className="infoItem">
+                        </Link>
+                        <Link to={`info/${this.state.infoId3}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc3})`}}></div>
                             <p>{this.state.infoName3}</p>
-                        </div>
+                        </Link>
 
                     </div>
 

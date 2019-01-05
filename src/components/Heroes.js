@@ -127,7 +127,7 @@ class Hero extends Component {
         let {HeroesArray} = this.state;
 
         return(
-            <a name={HeroesArray[id].name} className="heroes_persons">
+            <div className="heroes_persons">
                 <div className="label">{HeroesArray[id].name} <span style={{textTransform: 'uppercase'}}
                 >as {HeroesArray[id].as}</span></div>
                 <div className="personImage"><img
@@ -136,7 +136,7 @@ class Hero extends Component {
                 /></div>
                 <div className="personInfo"><p>{HeroesArray[id].decs}</p></div>
 
-            </a>
+            </div>
     );
     }
 }
@@ -145,6 +145,7 @@ class Heroes extends Component {
     state = {
         person: null,
         HeroesArray: [],
+        id: null,
     };
 
     changePerson(id, e) {
@@ -155,12 +156,14 @@ class Heroes extends Component {
         }
         for (let el of array) {
             el.className = 'heroImg person_nonActive';
+            el.parentNode.style.zIndex = 1;
         }
         if (active) {
             this.setState({person: null});
         }
         else if (e.target.className === 'heroImg person_nonActive') {
             e.target.className = 'heroImg person_active';
+            e.target.parentNode.style.zIndex = 2;
             this.setState({person: <Hero id={id} />});
         }
     }
@@ -170,7 +173,7 @@ class Heroes extends Component {
         if (this.props.location.hash) {
             // let id = HeroesArray[decodeURI(this.props.location.hash.substring(1))].id;
             let id = decodeURI(this.props.location.hash.substring(1));
-            this.setState({person: <Hero id={id} />});
+            this.setState({person: <Hero id={id} />, id: id });
         }
     }
 
@@ -196,11 +199,12 @@ class Heroes extends Component {
                 >
                     {
                         HeroesArray.map(hero =>  {
-                            let bg = require(`../images/heroes/${hero.src}`);
+                            let bg = require(`../images/heroes/${hero.src}`),
+                            active = hero.id == this.state.id ? 'heroImg person_active' : 'heroImg person_nonActive';
                             return(
-                                <a href={`#${hero.id}`} key={hero.id} onClick={(e) => this.changePerson(hero.id, e)}>
+                                <a href={`#${hero.id}`} key={hero.id} onClick={(e) => this.changePerson(hero.id, e)} style={active === 'heroImg person_active' ? {zIndex: 10} : {zIndex: 1}}>
                                     <div
-                                        className="heroImg person_nonActive"
+                                        className={active}
                                         style={{
                                             background: `url(${bg})`,
                                             height: '100px',
@@ -215,14 +219,6 @@ class Heroes extends Component {
                     }
                 </div>
                 {this.state.person}
-
-                {/*<Route path={`${this.props.match.path}#:name`} component={Hero} />*/}
-
-                {/*<Route*/}
-                {/*exact*/}
-                {/*path={this.props.match.path}*/}
-                {/*render={() => <h3>Please select a topic.</h3>}*/}
-                {/*/>*/}
             </div>
         );
     }

@@ -117,10 +117,8 @@ class Gallery extends Component {
         return (
             <div className="gallery">
                 <div className="shadow"></div>
-                <div className="gallery_close">
-                    <i className="fas fa-times" onClick={() => this.props.closeImage()}></i>
-                </div>
                 <div className="gallery_image">
+                    <i className="fas fa-times" onClick={() => this.props.closeImage()}></i>
                     <div
                         className="arrow_holder"
                         style={{left: 0}}
