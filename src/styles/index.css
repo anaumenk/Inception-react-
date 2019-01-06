@@ -26,16 +26,18 @@ body {
     margin: 0 auto;
 }
 
+.inRoot {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100px auto 60px;
+}
+
 header {
-    /*height: 100px;*/
     width: 100%;
-    /*background: black;*/
-    /*background: #308398;*/
-    /*border-bottom: 2px solid black;*/
     position: relative;
     display: flex;
     align-items: flex-end;
-    /*flex: 1 0 auto;*/
 }
 
 .movieName {
@@ -45,7 +47,6 @@ header {
     font-weight: bold;
     margin: 0 0 20px 20px;
     text-shadow: 2px 2px 10px black;
-    /*align-self: center;*/
 }
 
 .movieName:hover {
@@ -98,15 +99,29 @@ header {
 }
 
 footer {
-    /*bottom: 0;*/
-    /*position: absolute;*/
     display: flex;
     justify-content: center;
     width: 100%;
-    /*height: 60px;*/
     align-self: center;
-    /*flex: 0 0 auto;*/
 }
 
 
+@media only screen and (max-width: 1100px) {
+    #root {
+        max-width: 100%;
+    }
 
+    .inRoot {
+        grid-template-columns: 100%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .movieName {
+        margin: 28px 0 0 20px;
+    }
+}

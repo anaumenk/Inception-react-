@@ -144,7 +144,7 @@ export class InfoItem extends Component{
     render() {
         let bg  = require(`../images/info/${InfoArray[this.state.main].src}`);
         return(
-            <div className="content" style={{display: 'grid', gridTemplateColumns: '70% 30%'}}>
+            <div className="content info_content">
                 <div className="info_mainContent">
                     <div className="info_mainImage" style={{background: `url(${bg})`}}></div>
                     <h1>{InfoArray[this.state.main].name}</h1>

@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
         <Router>
-            <div style={{position: 'relative', height: '100%', display: 'grid', gridTemplateRows: '100px auto 60px'}}>
+            <div className="inRoot">
                 <Header />
                 <Switch>
                     <Route exact path="/" component={Home} />

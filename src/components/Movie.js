@@ -196,8 +196,6 @@ export class Movie extends Component {
                     }}
                 >
                     <iframe
-                        width="640"
-                        height="480"
                         title="inception trailer"
                         src="https://www.youtube.com/embed/xitHF0IPJSQ"
                     ></iframe>
@@ -205,13 +203,7 @@ export class Movie extends Component {
                 <div className="movie_about">
                     <div className="label">About</div>
                     <div className="movie_poster_desc">
-                        <div
-                            className="poster"
-                            style={{
-                                marginLeft: '100px',
-                                width: '329.47px'
-                            }}
-                        >
+                        <div className="poster movie_poster_desc_poster">
                             <img alt="poster" src={require('../images/poster02.jpg')} />
                         </div>
                         <div>
@@ -270,7 +262,7 @@ export class Movie extends Component {
 
                                     <Link to="/heroes#6">Cillian Murphy</Link>
                                     {this.state.a}
-                                    <br />
+                                    {/*<br />*/}
                                     <Link to="/heroes7#">Tom Berenger</Link>
                                     {this.state.a}
                                     <Link to="/heroes#8">Marion Cotillard</Link>
@@ -289,7 +281,7 @@ export class Movie extends Component {
                     </div>
                     <div className="movie_scenes">
                         <div className="label">Scenes</div>
-                        <div className="arrow arrow-left" onClick={() => this.ScenesSlideLeft()}></div>
+                        <div className="arrow arrow-left home_arrow" onClick={() => this.ScenesSlideLeft()}></div>
                         {
                             ScenesArray.map(scene => {
                                 let bg = require(`../images/scenes/${scene.src}`);
@@ -314,14 +306,14 @@ export class Movie extends Component {
                                 }
                             })
                         }
-                        <div className="arrow arrow-right" onClick={() => this.ScenesSlideRight()}></div>
+                        <div className="arrow arrow-right home_arrow" onClick={() => this.ScenesSlideRight()}></div>
 
                     </div>
                 </div>
-                <div className="movie_film">
-                    <div className="label">Movie</div>
-                    <iframe title="movie"></iframe>
-                </div>
+                {/*<div className="movie_film">*/}
+                    {/*<div className="label">Movie</div>*/}
+                    {/*<iframe title="movie"></iframe>*/}
+                {/*</div>*/}
                 {this.state.gallery}
             </div>
         );

@@ -128,7 +128,7 @@ class Hero extends Component {
 
         return(
             <div className="heroes_persons">
-                <div className="label">{HeroesArray[id].name} <span style={{textTransform: 'uppercase'}}
+                <div className="label heroes_label">{HeroesArray[id].name} <span style={{textTransform: 'uppercase'}}
                 >as {HeroesArray[id].as}</span></div>
                 <div className="personImage"><img
                     src={require(`../images/heroes/${HeroesArray[id].src}`)}

@@ -2,8 +2,6 @@
     margin-top: 50px;
     position: relative;
     max-width: 1100px;
-    /*flex: 1 0 auto;*/
-
 }
 
 .trailer_poster {
@@ -16,6 +14,8 @@
 
 .trailer iframe {
     border: none;
+    width: 640px;
+    height: 480px;
 }
 
 .poster {
@@ -37,7 +37,6 @@
     flex-direction: row;
     position: relative;
     justify-content: center;
-    /*background-color: black;*/
 }
 
 .label {
@@ -47,7 +46,6 @@
     color: white;
     font-size: 34px;
     letter-spacing: 5px;
-    /*font-weight: bold;*/
     text-shadow: 2px 2px 10px black;
     text-transform: uppercase;
 
@@ -99,8 +97,6 @@
 }
 
 .heroImg:hover {
-    /*height: 220px;*/
-    /*width: 220px;*/
     box-shadow: 0 0 20px black;
 }
 
@@ -117,14 +113,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*display: grid;*/
-    /*grid-template-rows: 150px 50px;*/
     margin: 0 20px;
     cursor: pointer;
     transition: 0.8s;
     color: white;
-    /*box-shadow: 2px 2px 20px black;*/
-
 }
 
 .infoItem div{
@@ -142,4 +134,54 @@
 .infoItem:hover{
     text-shadow: 2px 2px 10px black;
     color: white;
+}
+
+@media only screen and (max-width: 1100px) {
+    .trailer_poster {
+        height: 1000px;
+        flex-direction: column;
+    }
+
+    .trailer {
+        order: 2;
+    }
+
+    .trailer iframe {
+        width: 640px;
+        max-width: 100%;
+    }
+
+    .home_slider {
+        margin-top: 30px;
+        height: auto;
+        padding: 130px 0 100px 0;
+    }
+
+    .arrow-right.home_arrow {
+        transform:rotate(315deg);
+        position: absolute;
+        bottom: 0;
+        right: unset;
+    }
+
+    .arrow-left.home_arrow{
+        transform:rotate(133deg);
+        position: absolute;
+        top:40px;
+        left: unset;
+    }
+
+    .heroesList {
+        flex-direction: column;
+    }
+
+    .heroImg {
+        margin: 10px 0;
+    }
+
+    .info_list {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
 }
