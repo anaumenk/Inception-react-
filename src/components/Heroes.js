@@ -179,11 +179,11 @@ class Heroes extends Component {
 
         // location "#"
 
-        // if (this.props.location.hash) {
-        //     // let id = HeroesArray[decodeURI(this.props.location.hash.substring(1))].id;
-        //     let id = decodeURI(this.props.location.hash.substring(1));
-        //     this.setState({person: <Hero id={id} />, id: id });
-        // }
+        if (this.props.location.hash) {
+            // let id = HeroesArray[decodeURI(this.props.location.hash.substring(1))].id;
+            let id = decodeURI(this.props.location.hash.substring(1));
+            this.setState({person: <Hero id={id} />, id: id });
+        }
     }
 
     // async componentWillMount() {
@@ -209,9 +209,9 @@ class Heroes extends Component {
                     {
                         HeroesArray.map(hero =>  {
                             let bg = require(`../images/heroes/${hero.src}`),
-                            active = hero.id == this.state.id ? 'heroes_heroImg person_active' : 'heroes_heroImg person_nonActive';
+                            active = hero.id === parseInt(this.state.id) ? 'heroes_heroImg person_active' : 'heroes_heroImg person_nonActive';
                             return(
-                                <a href={`#${hero.id}`} key={hero.id} onClick={(e) => this.changePerson(hero.id, e)} style={active === 'heroes_heroImg person_active' ? {zIndex: 10} : {zIndex: 1}}>
+                                <div key={hero.id} onClick={(e) => this.changePerson(hero.id, e)} style={active === 'heroes_heroImg person_active' ? {zIndex: 10} : {zIndex: 1}}>
                                     <div
                                         className={active}
                                         style={{
@@ -222,7 +222,7 @@ class Heroes extends Component {
                                         }}
                                     >
                                     </div>
-                                </a>
+                                </div>
                             )
                         })
                     }

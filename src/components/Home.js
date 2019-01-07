@@ -155,27 +155,27 @@ class Home extends Component {
                     <Link to="/heroes"><div className="label">Cast</div></Link>
                     <div className="arrow arrow-left" onClick={() => this.CastSlideLeft()}></div>
                     <div className="heroesList">
-                        <a
+                        <Link
                             // href={`/heroes/${this.state.castId1}`}
-                            href={`/heroes`}
+                            to={`/heroes#${this.state.castId1}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc1})`}}
                         >
-                        </a>
-                        <a
-                            href={`/heroes}`}
+                        </Link>
+                        <Link
                             // href={`/heroes/${this.state.castId2}`}
+                            to={`/heroes#${this.state.castId2}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc2})`}}
                         >
-                        </a>
-                        <a
-                            href={`/heroes`}
+                        </Link>
+                        <Link
                             // href={`/heroes/${this.state.castId3}`}
+                            to={`/heroes#${this.state.castId3}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc3})`}}
                         >
-                        </a>
+                        </Link>
 
                     </div>
                     <div className="arrow arrow-right" onClick={() => this.CastSlideRight()}></div>

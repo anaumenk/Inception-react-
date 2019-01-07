@@ -131,7 +131,7 @@ export class InfoItem extends Component{
         }
         for (let i = 0; i < 3; i++) {
             n = Math.floor(Math.random() * (m.length));
-            while (m[n] == this.props.match.params.id) {
+            while (m[n] === parseInt(this.props.match.params.id)) {
                 n = Math.floor(Math.random() * (m.length));
             }
             // console.log('id: ' + this.props.match.params.id)
