@@ -1,5 +1,6 @@
 import React, {Component}  from 'react';
 import { Link } from "react-router-dom";
+import {HeroesArray} from "./Heroes";
 
 const ScenesArray = [
     {
@@ -163,18 +164,41 @@ class Gallery extends Component {
 export class Movie extends Component {
     state = {
         a: ', ',
-        sceneId: 0,
+        sceneId1: ScenesArray[0].id,
+        sceneId2: ScenesArray[1].id,
+        sceneId3: ScenesArray[2].id,
+        bg1: require(`../images/scenes/${ScenesArray[0].src}`),
+        bg2: require(`../images/scenes/${ScenesArray[1].src}`),
+        bg3: require(`../images/scenes/${ScenesArray[2].src}`),
         gallery: null,
     };
 
     ScenesSlideLeft() {
-        let id = this.state.sceneId - 3 < 0 ? ScenesArray.length - 3 : this.state.sceneId - 3;
-        this.setState({sceneId: id});
+        let id1 = this.state.sceneId1 === 0 ? ScenesArray.length - 1 : this.state.sceneId1 - 1,
+            id2 = id1 === ScenesArray.length - 1 ? 0 : id1 + 1,
+            id3 = id2 === ScenesArray.length - 1 ? 0 : id2 + 1;
+        this.changeScenes(id1, id2, id3);
     }
 
     ScenesSlideRight() {
-        let id = this.state.sceneId + 3 > ScenesArray.length - 1 ? 0 : this.state.sceneId + 3;
-        this.setState({sceneId: id});
+        let id1 = this.state.sceneId1 === ScenesArray.length - 1 ? 0 : this.state.sceneId1 + 1,
+            id2 = id1 === ScenesArray.length - 1 ? 0 : id1 + 1,
+            id3 = id2 === ScenesArray.length - 1 ? 0 : id2 + 1;
+        this.changeScenes(id1, id2, id3);
+    }
+
+
+    changeScenes(id1, id2, id3) {
+        this.setState({
+            sceneId1: id1,
+            bg1: require(`../images/scenes/${ScenesArray[id1].src}`),
+
+            sceneId2: id2,
+            bg2: require(`../images/scenes/${ScenesArray[id2].src}`),
+
+            sceneId3: id3,
+            bg3: require(`../images/scenes/${ScenesArray[id3].src}`),
+        })
     }
 
     openImage(id) {
@@ -281,32 +305,73 @@ export class Movie extends Component {
                     </div>
                     <div className="movie_scenes">
                         <div className="label">Scenes</div>
-                        <div className="arrow arrow-left home_arrow" onClick={() => this.ScenesSlideLeft()}></div>
-                        {
-                            ScenesArray.map(scene => {
-                                let bg = require(`../images/scenes/${scene.src}`);
-                                if (scene.id >= this.state.sceneId && scene.id < this.state.sceneId + 3) {
-                                    return (
-                                        <div
-                                            className="sceneItem"
-                                            key={scene.id}
-                                            style={{
-                                                background: `url(${bg}) center`,
-                                                backgroundSize: 'cover',
-                                            }}
-                                            onClick={() => this.openImage(scene.id)}
+                        <div className="arrow arrow-left" onClick={() => this.ScenesSlideLeft()}></div>
+                        {/*{*/}
+                            {/*ScenesArray.map(scene => {*/}
+                                {/*let bg = require(`../images/scenes/${scene.src}`);*/}
+                                {/*if (scene.id >= this.state.sceneId && scene.id < this.state.sceneId + 3) {*/}
+                                    {/*return (*/}
+                                        {/*<div*/}
+                                            {/*className="sceneItem"*/}
+                                            {/*key={scene.id}*/}
+                                            {/*style={{*/}
+                                                {/*background: `url(${bg}) center`,*/}
+                                                {/*backgroundSize: 'cover',*/}
+                                            {/*}}*/}
+                                            {/*onClick={() => this.openImage(scene.id)}*/}
 
-                                        >
-                                            <div className="biggerImg biggerImg_right"></div>
-                                            <div className="biggerImg biggerImg_left"></div>
-                                        </div>
-                                    );
-                                } else {
-                                    return null;
-                                }
-                            })
-                        }
-                        <div className="arrow arrow-right home_arrow" onClick={() => this.ScenesSlideRight()}></div>
+                                        {/*>*/}
+                                            {/*<div className="biggerImg biggerImg_right"></div>*/}
+                                            {/*<div className="biggerImg biggerImg_left"></div>*/}
+                                        {/*</div>*/}
+                                    {/*);*/}
+                                {/*} else {*/}
+                                    {/*return null;*/}
+                                {/*}*/}
+                            {/*})*/}
+                        {/*}*/}
+                        <div className="movie_scenes_all">
+                            <div
+                                className="sceneItem"
+                                key={this.state.sceneId1}
+                                style={{
+                                    background: `url(${this.state.bg1}) center`,
+                                    backgroundSize: 'cover',
+                                }}
+                                onClick={() => this.openImage(this.state.sceneId1)}
+                            >
+                                <div className="biggerImg biggerImg_right"></div>
+                                <div className="biggerImg biggerImg_left"></div>
+                            </div>
+
+                            <div
+                                className="sceneItem"
+                                key={this.state.sceneId2}
+                                style={{
+                                    background: `url(${this.state.bg2}) center`,
+                                    backgroundSize: 'cover',
+                                }}
+                                onClick={() => this.openImage(this.state.sceneId2)}
+                            >
+                                <div className="biggerImg biggerImg_right"></div>
+                                <div className="biggerImg biggerImg_left"></div>
+                            </div>
+
+                            <div
+                                className="sceneItem"
+                                key={this.state.sceneId3}
+                                style={{
+                                    background: `url(${this.state.bg3}) center`,
+                                    backgroundSize: 'cover',
+                                }}
+                                onClick={() => this.openImage(this.state.sceneId3)}
+                            >
+                                <div className="biggerImg biggerImg_right"></div>
+                                <div className="biggerImg biggerImg_left"></div>
+                            </div>
+                        </div>
+
+                        <div className="arrow arrow-right" onClick={() => this.ScenesSlideRight()}></div>
 
                     </div>
                 </div>

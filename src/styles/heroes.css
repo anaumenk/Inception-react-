@@ -1,3 +1,21 @@
+.heroes_heroesList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.heroes_heroImg {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 50%;
+    background-size: cover !important;
+    background-position: center !important;
+    transition: box-shadow 0.8s;
+}
+
 .heroes_persons {
     margin-top: 80px;
     position: relative;
@@ -21,13 +39,14 @@
 }
 
 .personImage img {
-    width: 100%;
+    width: 95%;
     height: auto;
     box-shadow: 2px 2px 10px black;
 }
 
 .personInfo {
-    padding-left: 30px;
+    /*padding-left: 30px;*/
+    padding: 10px 10px 0;
     text-align: justify;
 }
 
@@ -40,18 +59,11 @@
     transform: scale(2);
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 800px) {
     .heroes_persons {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .personImage {
-        max-width: 95%;
-    }
-
-    .personInfo {
-        padding: 10px 10px 0;
     }
 
     .heroes_label {

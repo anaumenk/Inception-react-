@@ -149,20 +149,20 @@ class Heroes extends Component {
     };
 
     changePerson(id, e) {
-        let array = document.getElementsByClassName('heroImg'),
+        let array = document.getElementsByClassName('heroes_heroImg'),
             active = false;
-        if (e.target.className === 'heroImg person_active') {
+        if (e.target.className === 'heroes_heroImg person_active') {
             active = true;
         }
         for (let el of array) {
-            el.className = 'heroImg person_nonActive';
+            el.className = 'heroes_heroImg person_nonActive';
             el.parentNode.style.zIndex = 1;
         }
         if (active) {
             this.setState({person: null});
         }
-        else if (e.target.className === 'heroImg person_nonActive') {
-            e.target.className = 'heroImg person_active';
+        else if (e.target.className === 'heroes_heroImg person_nonActive') {
+            e.target.className = 'heroes_heroImg person_active';
             e.target.parentNode.style.zIndex = 2;
             this.setState({person: <Hero id={id} />});
         }
@@ -188,7 +188,7 @@ class Heroes extends Component {
             <div className="content" style={{marginBottom: '50px'}}>
                 <div className="label">Cast</div>
                 <div
-                    className="heroesList"
+                    className="heroes_heroesList"
                     style={{
                         flexWrap: 'wrap',
                         justifyContent: 'center',
@@ -200,9 +200,9 @@ class Heroes extends Component {
                     {
                         HeroesArray.map(hero =>  {
                             let bg = require(`../images/heroes/${hero.src}`),
-                            active = hero.id == this.state.id ? 'heroImg person_active' : 'heroImg person_nonActive';
+                            active = hero.id == this.state.id ? 'heroes_heroImg person_active' : 'heroes_heroImg person_nonActive';
                             return(
-                                <a href={`#${hero.id}`} key={hero.id} onClick={(e) => this.changePerson(hero.id, e)} style={active === 'heroImg person_active' ? {zIndex: 10} : {zIndex: 1}}>
+                                <a href={`#${hero.id}`} key={hero.id} onClick={(e) => this.changePerson(hero.id, e)} style={active === 'heroes_heroImg person_active' ? {zIndex: 10} : {zIndex: 1}}>
                                     <div
                                         className={active}
                                         style={{

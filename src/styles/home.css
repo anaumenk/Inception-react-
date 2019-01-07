@@ -37,6 +37,7 @@
     flex-direction: row;
     position: relative;
     justify-content: center;
+    overflow: hidden;
 }
 
 .label {
@@ -151,37 +152,49 @@
         max-width: 100%;
     }
 
+}
+
+@media only screen and (max-width: 900px) {
     .home_slider {
         margin-top: 30px;
         height: auto;
-        padding: 130px 0 100px 0;
-    }
-
-    .arrow-right.home_arrow {
-        transform:rotate(315deg);
-        position: absolute;
-        bottom: 0;
-        right: unset;
-    }
-
-    .arrow-left.home_arrow{
-        transform:rotate(133deg);
-        position: absolute;
-        top:40px;
-        left: unset;
-    }
-
-    .heroesList {
-        flex-direction: column;
-    }
-
-    .heroImg {
-        margin: 10px 0;
-    }
-
-    .info_list {
-        flex-direction: column;
         padding-top: 30px;
     }
 
+    .heroesList {
+        display: grid;
+        height: 200px;
+        grid-template-columns: 220px 220px;
+        overflow: hidden;
+    }
+
+    .info_list {
+        padding-top: 30px;
+        display: grid;
+        height: 215px;
+        grid-template-columns: 220px 220px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .home_slider {
+        padding-top: 50px;
+    }
+
+    .heroesList {
+        grid-template-columns: 200px;
+    }
+
+    .heroImg {
+        margin: 0;
+    }
+
+    .info_list {
+        grid-template-columns: 220px;
+    }
+
+    .infoItem {
+        margin: 0 10px;
+    }
 }

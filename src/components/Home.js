@@ -153,7 +153,7 @@ class Home extends Component {
                 </div>
                 <div className="home_slider">
                     <Link to="/heroes"><div className="label">Cast</div></Link>
-                    <div className="arrow arrow-left home_arrow" onClick={() => this.CastSlideLeft()}></div>
+                    <div className="arrow arrow-left" onClick={() => this.CastSlideLeft()}></div>
                     <div className="heroesList">
                         <a
                             href={`heroes#${this.state.castId1}`}
@@ -175,11 +175,11 @@ class Home extends Component {
                         </a>
 
                     </div>
-                    <div className="arrow arrow-right home_arrow" onClick={() => this.CastSlideRight()}></div>
+                    <div className="arrow arrow-right" onClick={() => this.CastSlideRight()}></div>
                 </div>
                 <div className="home_slider">
                     <Link to="/info"><div className="label">Info</div></Link>
-                    <div className="arrow arrow-left home_arrow" onClick={() => this.InfoSlideLeft()}></div>
+                    <div className="arrow arrow-left" onClick={() => this.InfoSlideLeft()}></div>
 
                     <div className="info_list">
                         <Link to={`info/${this.state.infoId1}`} className="infoItem">
@@ -200,7 +200,7 @@ class Home extends Component {
 
                     </div>
 
-                    <div className="arrow arrow-right home_arrow" onClick={() => this.InfoSlideRight()}></div>
+                    <div className="arrow arrow-right" onClick={() => this.InfoSlideRight()}></div>
                 </div>
                 {/*</div>*/}
             </div>
