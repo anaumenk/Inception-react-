@@ -1,7 +1,7 @@
 {
   "main.css": "/Inception-react-/static/css/main.38d0fdab.chunk.css",
-  "main.js": "/Inception-react-/static/js/main.2ea06628.chunk.js",
-  "main.js.map": "/Inception-react-/static/js/main.2ea06628.chunk.js.map",
+  "main.js": "/Inception-react-/static/js/main.ca840c8f.chunk.js",
+  "main.js.map": "/Inception-react-/static/js/main.ca840c8f.chunk.js.map",
   "static/js/1.c11bd408.chunk.js": "/Inception-react-/static/js/1.c11bd408.chunk.js",
   "static/js/1.c11bd408.chunk.js.map": "/Inception-react-/static/js/1.c11bd408.chunk.js.map",
   "runtime~main.js": "/Inception-react-/static/js/runtime~main.a7e1d43c.js",
@@ -40,6 +40,6 @@
   "static/media/poster02.jpg": "/Inception-react-/static/media/poster02.b61a9da6.jpg",
   "static/css/main.38d0fdab.chunk.css.map": "/Inception-react-/static/css/main.38d0fdab.chunk.css.map",
   "index.html": "/Inception-react-/index.html",
-  "precache-manifest.f8b6df5ecc1436676798be179e6eda69.js": "/Inception-react-/precache-manifest.f8b6df5ecc1436676798be179e6eda69.js",
+  "precache-manifest.48d2af1e896be0137f543185bf6722f8.js": "/Inception-react-/precache-manifest.48d2af1e896be0137f543185bf6722f8.js",
   "service-worker.js": "/Inception-react-/service-worker.js"
 }

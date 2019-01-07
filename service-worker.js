@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Inception-react-/precache-manifest.f8b6df5ecc1436676798be179e6eda69.js"
+  "/Inception-react-/precache-manifest.48d2af1e896be0137f543185bf6722f8.js"
 );
 
 workbox.clientsClaim();
