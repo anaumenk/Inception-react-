@@ -197,7 +197,7 @@
     }
 
     .info_list {
-        grid-template-columns: 220px;
+        grid-template-columns: 200px;
     }
 
     .infoItem {
