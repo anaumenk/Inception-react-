@@ -143,7 +143,8 @@
     .info_item {
         display: flex;
         flex-direction: column;
-        height: 600px;
+        /*height: 600px;*/
+        height: auto;
         padding: 10px;
     }
 

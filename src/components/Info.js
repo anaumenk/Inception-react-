@@ -155,17 +155,17 @@ export class InfoItem extends Component{
                     }
                 </div>
                 <div className="info_otherInfo">
-                    <Link to={`${this.state.i1}`} className="info_other_item">
+                    <Link to={`/info/${this.state.i1}`} className="info_other_item">
                         <div className="info_other_image" style={{background: `url(${this.state.bg1})`}}></div>
                         <div className="info_other_name">{InfoArray[this.state.i1].name}</div>
                     </Link>
 
-                    <Link to={`${this.state.i2}`} className="info_other_item">
+                    <Link to={`/info/${this.state.i2}`} className="info_other_item">
                         <div className="info_other_image" style={{background: `url(${this.state.bg2})`}}></div>
                         <div className="info_other_name">{InfoArray[this.state.i2].name}</div>
                     </Link>
 
-                    <Link to={`${this.state.i3}`} className="info_other_item">
+                    <Link to={`/info/${this.state.i3}`} className="info_other_item">
                         <div className="info_other_image" style={{background: `url(${this.state.bg3})`}}></div>
                         <div className="info_other_name">{InfoArray[this.state.i3].name}</div>
                     </Link>

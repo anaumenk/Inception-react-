@@ -25,7 +25,7 @@ class App extends Component {
                     <Route exact path="/info" component={Info} />
                     <Route path="/info/:id" component={InfoItem} />
                     <Route exact path="/movie" component={Movie} />
-                    <Route path="*" component={NotFound}/>
+                    <Route path="*" component={Home}/>
                 </Switch>
                 <Footer />
             </div>
@@ -56,11 +56,6 @@ const Footer = () => (
         </div>
     </footer>
 );
-
-const NotFound = () => (
-    <h1>Not Found</h1>
-);
-
 
 
 export default App;

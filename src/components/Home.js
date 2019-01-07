@@ -156,19 +156,19 @@ class Home extends Component {
                     <div className="arrow arrow-left" onClick={() => this.CastSlideLeft()}></div>
                     <div className="heroesList">
                         <a
-                            href={`heroes#${this.state.castId1}`}
+                            href={`/heroes#${this.state.castId1}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc1})`}}
                         >
                         </a>
                         <a
-                            href={`heroes#${this.state.castId2}`}
+                            href={`/heroes#${this.state.castId2}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc2})`}}
                         >
                         </a>
                         <a
-                            href={`heroes#${this.state.castId3}`}
+                            href={`/heroes#${this.state.castId3}`}
                             className="heroImg"
                             style={{background: `url(${this.state.castSrc3})`}}
                         >
@@ -182,17 +182,17 @@ class Home extends Component {
                     <div className="arrow arrow-left" onClick={() => this.InfoSlideLeft()}></div>
 
                     <div className="info_list">
-                        <Link to={`info/${this.state.infoId1}`} className="infoItem">
+                        <Link to={`/info/${this.state.infoId1}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc1})`}}></div>
                             <p>{this.state.infoName1}</p>
                         </Link>
-                        <Link to={`info/${this.state.infoId2}`} className="infoItem">
+                        <Link to={`/info/${this.state.infoId2}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc2})`}}></div>
                             <p>{this.state.infoName2}</p>
                         </Link>
-                        <Link to={`info/${this.state.infoId3}`} className="infoItem">
+                        <Link to={`/info/${this.state.infoId3}`} className="infoItem">
                             <div
                                 style={{background: `url(${this.state.infoSrc3})`}}></div>
                             <p>{this.state.infoName3}</p>
