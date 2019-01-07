@@ -168,13 +168,17 @@ class Heroes extends Component {
     }
 
     componentDidMount() {
-        let location = this.props.location.pathname.split('/'),
-            id = parseInt(location[location.length - 1]);
+        // location "/"
 
-        if (Number.isInteger(id)) {
-            // let id = decodeURI(this.props.location.hash.substring(1));
-            this.setState({person: <Hero id={id} />, id: id });
-        }
+        // let location = this.props.location.pathname.split('/'),
+        //     id = parseInt(location[location.length - 1]);
+        //
+        // if (Number.isInteger(id)) {
+        //     this.setState({person: <Hero id={id} />, id: id });
+        // }
+
+        // location "#"
+
         // if (this.props.location.hash) {
         //     // let id = HeroesArray[decodeURI(this.props.location.hash.substring(1))].id;
         //     let id = decodeURI(this.props.location.hash.substring(1));

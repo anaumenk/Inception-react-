@@ -8,7 +8,7 @@ import './styles/info.css'
 
 import Home from './components/Home';
 import Info from './components/Info';
-import Heroes, {Hero} from './components/Heroes';
+import Heroes from './components/Heroes';
 import {Movie} from './components/Movie';
 import {InfoItem} from "./components/Info";
 
@@ -23,7 +23,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/heroes" component={Heroes} />
 
-                    <Route path="/heroes/:id" component={Heroes} />
+                    {/*<Route path="/heroes/:id" component={Heroes} />*/}
 
                     <Route exact path="/info" component={Info} />
                     <Route path="/info/:id" component={InfoItem} />
